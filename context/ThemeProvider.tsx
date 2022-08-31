@@ -6,6 +6,7 @@ export interface Colors {
   primary: string
   secondary: string
   background: string
+  divider: string
   text: string
   secondaryText: string
 }

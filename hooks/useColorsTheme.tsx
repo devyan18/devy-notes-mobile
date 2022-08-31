@@ -6,6 +6,7 @@ const useColorsTheme = (darkMode: boolean): Colors => {
     primary: '',
     secondary: '',
     background: '',
+    divider: '',
     text: '',
     secondaryText: ''
   })
@@ -15,6 +16,7 @@ const useColorsTheme = (darkMode: boolean): Colors => {
       primary: '#a020f0',
       secondary: '#666666',
       background: darkMode ? '#242526' : '#ffffff',
+      divider: darkMode ? '#2C2E2F' : '#ddd',
       text: darkMode ? '#ffffff' : '#000000',
       secondaryText: darkMode ? '#999999' : '#444444'
     })

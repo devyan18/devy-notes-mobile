@@ -10,7 +10,8 @@ export default function Styles () {
   return StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: colors.background
+      backgroundColor: colors.background,
+      paddingHorizontal: 10
     }
   })
 }

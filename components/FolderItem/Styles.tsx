@@ -14,7 +14,7 @@ export default function Styles () {
       height: 60,
       flexDirection: 'row',
       alignItems: 'center',
-      borderBottomColor: colors.text,
+      borderBottomColor: colors.divider,
       borderBottomWidth: 1
     },
     title: {

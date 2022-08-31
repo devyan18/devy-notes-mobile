@@ -1,4 +1,4 @@
-import { View, FlatList, ActivityIndicator, Text, Button } from 'react-native'
+import { View, FlatList, ActivityIndicator, Text, Switch } from 'react-native'
 import useFolders from '../../hooks/useFolders'
 import FolderItem from '../FolderItem'
 import { useTheme, useToggleDarkMode } from '../../context/ThemeProvider'
@@ -29,7 +29,16 @@ export default function FolderList () {
       headerStyle: {
         backgroundColor: colors.background
       },
-      headerTintColor: colors.text
+      headerTintColor: colors.text,
+      headerRight: () => (
+        <Switch
+          trackColor={{ false: '#767577', true: '#ccc' }}
+          thumbColor={!theme ? colors.primary : '#f4f3f4'}
+          ios_backgroundColor="#3e3e3e"
+          onValueChange={toggleDarkMode}
+          value={!theme}
+        />
+      )
     })
   }, [colors])
 
@@ -43,7 +52,6 @@ export default function FolderList () {
 
   return (
     <View style={styles.container}>
-      <Button title='toggle dark mode' onPress={toggleDarkMode}/>
       {
         isLoading
           ? <ActivityIndicator size='large' color={colors.text} />

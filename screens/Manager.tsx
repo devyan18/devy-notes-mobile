@@ -25,9 +25,21 @@ export default function Manager () {
           session.token
             ? (
               <>
-                <Stack.Screen name='FolderList' component={FolderList} />
-                <Stack.Screen name='Folder' component={Folder} />
-                <Stack.Screen name='Note' component={Note} />
+                <Stack.Screen
+                  options={{ headerShadowVisible: false }}
+                  name='FolderList'
+                  component={FolderList}
+                />
+                <Stack.Screen
+                  options={{ headerShadowVisible: false }}
+                  name='Folder'
+                  component={Folder}
+                />
+                <Stack.Screen
+                  options={{ headerShadowVisible: false }}
+                  name='Note'
+                  component={Note}
+                />
               </>
               )
             : <Stack.Screen name='Auth' component={Auth} />

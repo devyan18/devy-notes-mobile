@@ -27,7 +27,7 @@ export default function FolderItem (props: Props) {
         folderId: props._id,
         title: props.title
       })}>
-      <AntDesign name="folder1" size={24} color={colors.text} />
+      <AntDesign name="folder1" size={24} color={colors.primary} />
       <Text numberOfLines={1} style={styles.title}>{props.title}</Text>
     </TouchableOpacity>
   )
