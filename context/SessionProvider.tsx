@@ -53,13 +53,8 @@ function SessionProvider (props: Props) {
   }, [])
 
   useEffect(() => {
-    if (session.token) {
+    if (session.token && !session.user) {
       setToken(session.token)
-      setSession({
-        ...session,
-        user: null
-      })
-
       getUser(session.token).then(user => {
         setSession({
           ...session,

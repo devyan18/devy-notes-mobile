@@ -9,7 +9,7 @@ export default function App () {
     <QueryClientProvider client={queryClient}>
       <SessionProvider>
         <ThemeProvider>
-            <Manager />
+          <Manager />
         </ThemeProvider>
       </SessionProvider>
     </QueryClientProvider>

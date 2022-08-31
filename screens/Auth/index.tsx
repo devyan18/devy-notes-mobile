@@ -29,7 +29,6 @@ export default function Auth () {
         user: null
       })
     }
-    console.log(token)
   }, [token])
 
   if (error) {

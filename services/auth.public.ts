@@ -3,7 +3,6 @@ import { IUser } from '../models/entities'
 const URL = 'https://dws-users.herokuapp.com'
 
 export const getUser = async (token: string): Promise<IUser | null> => {
-  console.log('llegó a get user')
   const response = await fetch(`${URL}/token`, {
     method: 'POST',
     headers: {
