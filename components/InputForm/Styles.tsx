@@ -10,6 +10,7 @@ export default function Styles () {
   return StyleSheet.create({
     input: {
       color: colors.text,
+      fontSize: 20,
       width: Dimensions.get('window').width - 120,
       borderWidth: 1,
       borderColor: '#666',

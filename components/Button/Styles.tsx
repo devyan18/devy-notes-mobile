@@ -1,6 +1,11 @@
 import { Dimensions, StyleSheet } from 'react-native'
+import { useTheme } from '../../context/ThemeProvider'
+import useColorsTheme from '../../hooks/useColorsTheme'
 
 export default function Styles (type: string) {
+  const theme = useTheme()
+  const colors = useColorsTheme(theme)
+
   if (type === 'primary') {
     return StyleSheet.create({
       button: {
@@ -8,12 +13,13 @@ export default function Styles (type: string) {
         width: Dimensions.get('window').width - 120,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#a020f0',
+        backgroundColor: colors.primary,
         marginTop: 10,
         borderRadius: 12
       },
       text: {
         color: '#eee',
+        fontSize: 20,
         fontWeight: 'bold'
       }
     })
@@ -32,6 +38,7 @@ export default function Styles (type: string) {
       },
       text: {
         color: '#aaa',
+        fontSize: 20,
         fontWeight: 'bold'
       }
     })

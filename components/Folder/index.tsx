@@ -21,11 +21,11 @@ export default function Folder () {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerTitle: route.params?.title,
+      headerTitle: route.params.title,
       headerStyle: {
         backgroundColor: colors.background
       },
-      headerTintColor: colors.text
+      headerTintColor: colors.primary
     })
   }, [colors, route])
 

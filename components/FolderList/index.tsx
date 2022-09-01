@@ -1,13 +1,14 @@
-import { View, FlatList, ActivityIndicator, Text, Switch } from 'react-native'
+import { View, FlatList, ActivityIndicator, Text, TouchableOpacity } from 'react-native'
 import useFolders from '../../hooks/useFolders'
 import FolderItem from '../FolderItem'
-import { useTheme, useToggleDarkMode } from '../../context/ThemeProvider'
+import { useTheme } from '../../context/ThemeProvider'
 import useColorsTheme from '../../hooks/useColorsTheme'
 import Styles from './Styles'
 import { useLayoutEffect } from 'react'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { RootStackParamList } from '../../screens/Manager'
 import { useNavigation } from '@react-navigation/native'
+import { AntDesign } from '@expo/vector-icons'
 
 export type folderListScreenProp = StackNavigationProp<RootStackParamList, 'FolderList'>
 
@@ -21,23 +22,17 @@ export default function FolderList () {
   const theme = useTheme()
   const colors = useColorsTheme(theme)
 
-  const toggleDarkMode = useToggleDarkMode()
-
   useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle: 'Folders',
       headerStyle: {
         backgroundColor: colors.background
       },
-      headerTintColor: colors.text,
+      headerTintColor: colors.primary,
       headerRight: () => (
-        <Switch
-          trackColor={{ false: '#767577', true: '#ccc' }}
-          thumbColor={colors.primary}
-          ios_backgroundColor="#3e3e3e"
-          onValueChange={toggleDarkMode}
-          value={!theme}
-        />
+        <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+          <AntDesign name="setting" size={24} color={colors.primary}/>
+        </TouchableOpacity>
       )
     })
   }, [colors])

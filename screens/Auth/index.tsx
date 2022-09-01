@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar'
 import { useEffect, useState } from 'react'
 import { Text, View } from 'react-native'
 import Button from '../../components/Button'
@@ -29,6 +28,8 @@ export default function Auth () {
         user: null
       })
     }
+    setEmail('')
+    setPassword('')
   }, [token])
 
   if (error) {
@@ -41,7 +42,6 @@ export default function Auth () {
 
   return (
     <View style={styles.container}>
-      <StatusBar style='dark'/>
       <Text style={styles.title}>Login to continue</Text>
       <View>
         <InputForm
