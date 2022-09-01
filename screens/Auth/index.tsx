@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Text, View } from 'react-native'
+import { Text, ToastAndroid, View } from 'react-native'
+import { useSetSession } from '../../context/SessionProvider'
+
 import Button from '../../components/Button'
 import InputForm from '../../components/InputForm'
-import { useSetSession } from '../../context/SessionProvider'
 import useLogin from '../../hooks/useLogin'
+
 import Styles from './Styles'
 
 export default function Auth () {
@@ -28,17 +30,12 @@ export default function Auth () {
         user: null
       })
     }
+    if (error) {
+      ToastAndroid.show('Unexpected Error', ToastAndroid.LONG)
+    }
     setEmail('')
     setPassword('')
   }, [token])
-
-  if (error) {
-    return (
-      <View style={styles.container}>
-        <Text>hubo un error</Text>
-      </View>
-    )
-  }
 
   return (
     <View style={styles.container}>

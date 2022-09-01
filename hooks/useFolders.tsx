@@ -5,12 +5,13 @@ import { getFolders } from '../services/folders.public'
 const useFolders = () => {
   const session = useSession()
 
-  const { data, isLoading, error } = useQuery(['folders'], () => getFolders(session.token || ''))
+  const { data, isLoading, error, isFetching } = useQuery(['folders'], () => getFolders(session.token || ''))
 
   return {
     data,
     isLoading,
-    error
+    error,
+    isFetching
   }
 }
 
