@@ -13,10 +13,10 @@ const useColorsTheme = (darkMode: boolean): Colors => {
 
   useEffect(() => {
     setColors({
-      primary: '#a020f0',
+      primary: darkMode ? '#a020f0' : '#0099ff',
       secondary: '#666666',
       background: darkMode ? '#242526' : '#ffffff',
-      divider: darkMode ? '#2C2E2F' : '#ddd',
+      divider: darkMode ? '#313233' : '#eee',
       text: darkMode ? '#ffffff' : '#000000',
       secondaryText: darkMode ? '#999999' : '#444444'
     })

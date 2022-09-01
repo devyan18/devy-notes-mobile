@@ -25,7 +25,7 @@ export default function FolderList () {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerTitle: 'Folder list',
+      headerTitle: 'Folders',
       headerStyle: {
         backgroundColor: colors.background
       },
@@ -33,7 +33,7 @@ export default function FolderList () {
       headerRight: () => (
         <Switch
           trackColor={{ false: '#767577', true: '#ccc' }}
-          thumbColor={!theme ? colors.primary : '#f4f3f4'}
+          thumbColor={colors.primary}
           ios_backgroundColor="#3e3e3e"
           onValueChange={toggleDarkMode}
           value={!theme}

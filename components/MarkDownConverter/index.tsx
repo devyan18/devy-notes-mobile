@@ -54,10 +54,10 @@ export default function MarkdownConverter ({ text }: Props) {
       color: defaultColors.text
     },
     hr: {
-      backgroundColor: colors.secondaryText
+      backgroundColor: colors.divider
     },
     blockquote: {
-      backgroundColor: theme ? '#1A1B1C' : '#cccccc',
+      backgroundColor: theme ? '#1A1B1C' : '#eeeeee',
       borderRadius: 4
     },
     bullet_list: {
@@ -67,34 +67,34 @@ export default function MarkdownConverter ({ text }: Props) {
       color: colors.secondaryText
     },
     code_block: {
-      backgroundColor: theme ? '#1A1B1C' : '#cccccc',
-      borderColor: theme ? '#1A1B1C' : '#cccccc'
+      backgroundColor: theme ? '#1A1B1C' : '#eeeeee',
+      borderColor: theme ? '#1A1B1C' : '#eeeeee'
     },
     code_inline: {
-      backgroundColor: theme ? '#1A1B1C' : '#cccccc',
-      borderColor: theme ? '#1A1B1C' : '#cccccc'
+      backgroundColor: theme ? '#1A1B1C' : '#eeeeee',
+      borderColor: theme ? '#1A1B1C' : '#eeeeee'
     },
     fence: {
-      backgroundColor: theme ? '#1A1B1C' : '#cccccc',
-      borderColor: theme ? '#1A1B1C' : '#cccccc'
+      backgroundColor: theme ? '#1A1B1C' : '#eeeeee',
+      borderColor: theme ? '#1A1B1C' : '#eeeeee'
     },
     th: {
-      borderColor: colors.secondaryText,
+      borderColor: colors.divider,
       color: defaultColors.text
     },
     td: {
-      borderColor: colors.secondaryText,
+      borderColor: colors.divider,
       color: defaultColors.text
     },
     tr: {
-      borderColor: colors.secondaryText,
+      borderColor: colors.divider,
       color: defaultColors.text
     },
     table: {
-      borderColor: colors.secondaryText
+      borderColor: colors.divider
     },
     thead: {
-      backgroundColor: theme ? '#1A1B1C' : '#cccccc'
+      backgroundColor: theme ? '#1A1B1C' : '#eeeeee'
     },
     link: {
       color: defaultColors.link

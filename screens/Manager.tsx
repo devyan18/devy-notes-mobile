@@ -6,6 +6,9 @@ import { useSession } from '../context/SessionProvider'
 import FolderList from '../components/FolderList'
 import Folder from '../components/Folder'
 import Note from '../components/Note'
+import { useTheme } from '../context/ThemeProvider'
+import useColorsTheme from '../hooks/useColorsTheme'
+import { StatusBar } from 'expo-status-bar'
 
 export type RootStackParamList = {
   FolderList: undefined;
@@ -17,9 +20,13 @@ export type RootStackParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
 export default function Manager () {
+  const theme = useTheme()
+  const colors = useColorsTheme(theme)
+
   const session = useSession()
   return (
     <NavigationContainer>
+      <StatusBar backgroundColor={colors.background} style={theme ? 'light' : 'dark'}/>
       <Stack.Navigator>
         {
           session.token
