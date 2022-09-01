@@ -1,7 +1,9 @@
 import { INote } from '../models/entities'
 
+const URL = 'https://dws-notes-typegoose-production.up.railway.app'
+
 export const getNotes = async (token: string, folderId: string) => {
-  const request = await fetch(`http://192.168.0.112:4031/api/v1/notes/${folderId}`, {
+  const request = await fetch(`${URL}/api/v1/notes/${folderId}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
