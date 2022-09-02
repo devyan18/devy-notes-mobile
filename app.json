@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "devy-notes-mobile-ts",
+    "name": "Devy Notes",
     "slug": "devy-notes-mobile-ts",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/devy-icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",

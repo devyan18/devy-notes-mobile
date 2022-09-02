@@ -12,7 +12,6 @@ const useLogin = () => {
     getToken(email, password)
       .then(response => {
         if (response.token) {
-          console.log(response.token)
           setToken(response.token)
         } else {
           ToastAndroid.show('Email or Password incorrect', ToastAndroid.LONG)
